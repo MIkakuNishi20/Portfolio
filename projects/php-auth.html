@@ -3,48 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP & MySQL Auth | Julian G. Pedro</title>
+    <title>User Authentication System | Julian G. Pedro</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     <div class="container">
-        <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
-
-        <header>
-            <h1>User Authentication System</h1>
-            <p>Focus: PHP, MySQL, Session Management, and Security</p>
-        </header>
-
+        <a href="../index.html" class="btn" style="margin-bottom: 20px; display: inline-block;"><i class="fa-solid fa-arrow-left"></i> Back to Main Portfolio</a>
+        
         <section class="section">
-            <h2>Overview</h2>
-            <p>This backend system handles secure user registration, password verification using BCRYPT hashing, dynamic input validation, and session persistence across dynamic routes.</p>
+            <h2><i class="fa-solid fa-lock"></i> User Authentication System</h2>
+            <p><strong>Focus:</strong> PHP, MySQL, Password Hashing, Session Security</p>
+            <p>Backend authentication portal featuring input sanitization, database user verification, and persistent session state handling.</p>
         </section>
 
         <section class="section">
-            <h2>1. Database Schema (MySQL)</h2>
-<pre><code>CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;</code></pre>
-        </section>
-
-        <section class="section">
-            <h2>2. Registration Handler (PHP)</h2>
-<pre><code>&lt;?php
+            <h2>Backend Logic Implementation</h2>
+            <pre><code>&lt;?php
 session_start();
 require_once 'db_connect.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = trim($_POST['username']);
+    $password = $_POST['password'];
 
-    $stmt = $pdo->prepare("INSERT INTO users (email, password_hash) VALUES (?, ?)");
-    if ($stmt->execute([$email, $password])) {
-        $_SESSION['user_id'] = $pdo->lastInsertId();
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->execute([$username]);
+    $user = $stmt->fetch();
+
+    if ($user && password_verify($password, $user['password_hash'])) {
+        $_SESSION['user_id'] = $user['id'];
         header("Location: dashboard.php");
         exit();
     }
@@ -52,23 +40,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?&gt;</code></pre>
         </section>
 
-        <section class="section">
-            <h2>3. Authentication Guard & Session Verification (PHP)</h2>
-<pre><code>&lt;?php
-session_start();
-
-// Redirect unauthenticated users back to login
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-?&gt;</code></pre>
-        </section>
-
         <footer>
-            <p>Connect on <a href="https://github.com/MlkakuNishi20">GitHub</a></p>
+            <p>&copy; 2026 Julian G. Pedro • Built with HTML, CSS, & PHP</p>
         </footer>
     </div>
-
 </body>
 </html>
