@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Architecture | Julian G. Pedro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+
+        <header>
+            <h1>Modular Web Architecture</h1>
+            <p>Focus: PHP Modularization, Reusable Components, and CSS Layouts</p>
+        </header>
+
+        <section class="section">
+            <h2>Overview</h2>
+            <p>Demonstrating DRY (Don't Repeat Yourself) principles by refactoring monolithic web application files into modular navigation, header, and footer includes.</p>
+        </section>
+
+        <section class="section">
+            <h2>Component Structure (PHP)</h2>
+<pre><code>&lt;?php
+// index.php
+$pageTitle = "Home | Personal Portfolio";
+include_once 'includes/header.php';
+include_once 'includes/navbar.php';
+?&gt;
+
+&lt;main class="content"&gt;
+    &lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+&lt;/main&gt;
+
+&lt;?php
+include_once 'includes/footer.php';
+?&gt;</code></pre>
+        </section>
+
+        <footer>
+            <p>Connect on <a href="https://github.com/MlkakuNishi20">GitHub</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
