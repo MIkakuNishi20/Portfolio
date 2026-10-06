@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Utilities | Julian G. Pedro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">&larr; Back to Portfolio</a>
+
+        <header>
+            <h1>Mobile Utility Suite</h1>
+            <p>Focus: MIT App Inventor, Mobile Layouts, and Conditional Logic</p>
+        </header>
+
+        <section class="section">
+            <h2>Overview</h2>
+            <p>A collection of mobile applications covering unit conversion, wage calculation, and body mass index dynamic checks built with structured event blocks and responsive interfaces.</p>
+        </section>
+
+        <section class="section">
+            <h2>Logic Implementation</h2>
+<pre><code>// Pseudocode for BMI & Wage Logic Processing
+when ButtonCalculate.Click do
+  if IsNumber(TextBoxHeight.Text) and IsNumber(TextBoxWeight.Text) then
+    set Global heightInMeters to TextBoxHeight.Text / 100
+    set Global bmiResult to TextBoxWeight.Text / (heightInMeters * heightInMeters)
+    
+    if Global bmiResult &lt; 18.5 then
+      set LabelStatus.Text to "Underweight"
+    else if Global bmiResult &lt; 25 then
+      set LabelStatus.Text to "Normal weight"
+    else
+      set LabelStatus.Text to "Overweight"
+    end if
+  end if</code></pre>
+        </section>
+
+        <footer>
+            <p>Connect on <a href="https://github.com/MlkakuNishi20">GitHub</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
