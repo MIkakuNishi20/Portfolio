@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #30363d;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #8b949e;
+}
+
+.section {
+    margin: 35px 0;
+}
+
+.section h2 {
+    font-size: 1.6rem;
+    color: #f0f6fc;
+    margin-bottom: 15px;
+    border-left: 4px solid #58a6ff;
+    padding-left: 10px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    color: #f0f6fc;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #21262d;
+    color: #58a6ff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid #30363d;
+    transition: all 0.2s ease;
+    width: fit-content;
+}
+
+.btn:hover {
+    background: #30363d;
+    color: #79c0ff;
+    border-color: #58a6ff;
+}
+
+pre {
+    background: #0d1117;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    border: 1px solid #30363d;
+    color: #79c0ff;
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #8b949e;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #58a6ff;
+}
+
+footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #30363d;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #58a6ff;
+    text-decoration: none;
+}
