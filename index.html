@@ -3,50 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julian G. Pedro | Personal Portfolio</title>
+    <title>Julian G. Pedro | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <div class="container">
-        <header>
-            <img src="Mywuwa2.png" alt="Julian G. Pedro" class="profile-img">
+        <!-- Header / Hero Section -->
+        <header class="hero-header">
+            <div class="profile-wrapper">
+                <img src="Mywuwa2.png" alt="Julian G. Pedro" class="profile-img">
+            </div>
             <h1>Julian G. Pedro</h1>
-            <p>BSIT Student & Web Developer | Full-Stack & Systems Focus</p>
+            <p class="subtitle">3rd Year BSIT Student | Web & Mobile Developer</p>
+            <div class="header-badges">
+                <span class="badge"><i class="fa-solid fa-location-dot"></i> Nueva Vizcaya, PH</span>
+                <span class="badge"><i class="fa-solid fa-graduation-cap"></i> NVSU - BSIT 3D</span>
+            </div>
         </header>
 
+        <!-- About Section -->
         <section class="section">
-            <h2>About Me</h2>
-            <p>I specialize in building full-stack web applications, backend authentication systems, and database architectures. Experienced in PHP, MySQL, JavaScript, HTML5/CSS3, and mobile app design.</p>
+            <h2><i class="fa-solid fa-user"></i> About Me</h2>
+            <p class="about-text">
+                I am a third-year Information Technology student specializing in dynamic web application development, backend systems, and mobile interfaces. Experienced in managing full-stack workflows using PHP, MySQL, CSS3, and MIT App Inventor.
+            </p>
         </section>
 
+        <!-- Technical Stack & Tools -->
         <section class="section">
-            <h2>Featured Projects & Code Focus</h2>
+            <h2><i class="fa-solid fa-code"></i> Technical Stack & Tools</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Web & Languages</h3>
+                    <div class="tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Database</h3>
+                    <div class="tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">XAMPP</span>
+                        <span class="tag">Session Auth</span>
+                        <span class="tag">CRUD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Mobile & Workflows</h3>
+                    <div class="tags">
+                        <span class="tag">MIT App Inventor</span>
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section">
+            <h2><i class="fa-solid fa-folder-open"></i> Featured Projects</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <h3>User Authentication System</h3>
-                    <p>Backend login portal featuring dynamic input handling, password hashing, session management, and MySQL database integration.</p>
-                    <a href="projects/php-auth.html" class="btn">View Code & Details &rarr;</a>
+                    <div class="card-header">
+                        <h3>User Authentication System</h3>
+                        <span class="project-tag">PHP / MySQL</span>
+                    </div>
+                    <p>Secure login portal with dynamic input handling, password hashing, and database connection architecture.</p>
+                    <a href="projects/php-auth.html" class="btn">View Logic & Details <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Modular Web Architecture</h3>
-                    <p>Dynamic PHP portfolio demonstrating component refactoring, DRY principles, and structured CSS layouts.</p>
-                    <a href="projects/modular-web.html" class="btn">View Code & Details &rarr;</a>
+                    <div class="card-header">
+                        <h3>Modular Web Architecture</h3>
+                        <span class="project-tag">PHP Architecture</span>
+                    </div>
+                    <p>Dynamic web layout modularized with PHP includes, DRY design principles, and responsive CSS structure.</p>
+                    <a href="projects/modular-web.html" class="btn">View Logic & Details <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Mobile Utility Suite</h3>
-                    <p>Functional mobile application logic incorporating unit conversion, wage calculation, and body mass index dynamic checks.</p>
-                    <a href="projects/mobile-app.html" class="btn">View Code & Details &rarr;</a>
+                    <div class="card-header">
+                        <h3>Mobile Utility Suite</h3>
+                        <span class="project-tag">App Inventor</span>
+                    </div>
+                    <p>Suite of mobile application modules including wage computation, dynamic unit conversions, and BMI metrics.</p>
+                    <a href="projects/mobile-app.html" class="btn">View Logic & Details <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section class="section">
+            <h2><i class="fa-solid fa-envelope"></i> Get In Touch</h2>
+            <div class="contact-card">
+                <p>Feel free to reach out for academic collaborations, web development inquiries, or system workflows:</p>
+                <div class="contact-links">
+                    <a href="https://github.com/MlkakuNishi20" target="_blank" class="contact-btn"><i class="fa-brands fa-github"></i> github.com/MlkakuNishi20</a>
+                </div>
+            </div>
+        </section>
+
         <footer>
-            <p>&copy; 2026 Julian G. Pedro. Built with HTML, CSS, and PHP.</p>
+            <p>&copy; 2026 Julian G. Pedro • Built with HTML, CSS, & PHP</p>
         </footer>
     </div>
 
